@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Expresión Estelar: tarot, Reiki, registros akáshicos, mediumnidad y quiromancia.">
+  <title>Expresión Estelar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="nav" id="inicio">
+    <a class="wordmark" href="#inicio">EE <span>✦</span></a>
+    <button class="menu-button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav>
+      <a href="#esencia">Esencia</a><a href="#sobre-mi">Sobre mí</a><a href="#servicios">Servicios</a><a href="#agenda">Agenda</a>
+    </nav>
+    <a class="button button-small" href="#agenda">Reservar</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="moon moon-one" aria-hidden="true"></div>
+      <div class="hero-mark"><span>✦</span><span class="line"></span><span>☾</span></div>
+      <img src="assets/logo.png" class="logo" alt="Expresión Estelar, un espacio para reconocer tu luz">
+      <p class="hero-quote" id="hero-quote"></p>
+      <a class="button" href="#esencia">Conoce más <span>↓</span></a>
+      <div class="orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+    </section>
+
+    <section class="section split" id="esencia">
+      <div class="section-label">01 · La esencia</div>
+      <div>
+        <p class="eyebrow">Reconecta contigo</p>
+        <h1 id="about-title"></h1>
+        <div id="about-copy" class="prose"></div>
+      </div>
+      <blockquote>Tu luz no se ha ido.<br><em>Solo espera ser recordada.</em></blockquote>
+    </section>
+
+    <section class="section about-card" id="sobre-mi">
+      <div class="portrait-symbol" aria-hidden="true"><span>☼</span><div class="halo"></div></div>
+      <div>
+        <div class="section-label">02 · Tu guía</div>
+        <p class="eyebrow">Sobre mí</p>
+        <h2 id="person-name"></h2>
+        <p class="large" id="short-bio"></p>
+        <p class="signature">No se trata de predecir, sino de recordar quién eres.</p>
+        <button class="text-button" id="bio-toggle">Conoce mi camino <span>＋</span></button>
+        <div class="prose bio" id="bio-copy" hidden></div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="section-heading">
+        <div><div class="section-label">03 · Servicios</div><p class="eyebrow">Elige tu experiencia</p><h2>Herramientas para volver a ti</h2></div>
+        <p>Cada encuentro es un espacio íntimo, respetuoso y personalizado para aportar claridad a tu proceso.</p>
+      </div>
+      <div class="services" id="services-list"></div>
+    </section>
+
+    <section class="section testimonial">
+      <span class="quote-mark">“</span>
+      <h2>Cada experiencia es única.</h2>
+      <p>Gracias por compartir cómo este espacio ha contribuido en tu camino.</p>
+      <button class="text-button light" id="testimonial-toggle">Compartir mi experiencia <span>＋</span></button>
+      <form id="testimonial-form" class="testimonial-form" hidden>
+        <label>Nombre<input name="name" required></label>
+        <label>País<input name="country"></label>
+        <label class="wide">Tu experiencia<textarea name="message" rows="4" required></textarea></label>
+        <label>Calificación<select name="rating"><option>★★★★★</option><option>★★★★</option><option>★★★</option><option>★★</option><option>★</option></select></label>
+        <button class="button" type="submit">Enviar por WhatsApp</button>
+      </form>
+    </section>
+
+    <section class="section booking" id="agenda">
+      <div>
+        <div class="section-label">04 · Agenda</div>
+        <p class="eyebrow">Agenda abierta</p>
+        <h2>Reserva tu sesión</h2>
+        <p>Elige tu experiencia y tu horario preferido. WhatsApp se abrirá con toda la información lista para enviar.</p>
+        <div class="availability"><span class="pulse"></span><strong id="schedule-days"></strong><span id="schedule-times"></span></div>
+      </div>
+      <form id="booking-form" class="booking-form">
+        <label>Tu nombre<input name="name" placeholder="Nombre y apellido" required></label>
+        <label>Servicio<select name="service" id="service-select" required><option value="">Selecciona una opción</option></select></label>
+        <div class="form-row"><label>Día<select name="day" id="day-select" required></select></label><label>Hora<select name="time" id="time-select" required></select></label></div>
+        <button class="button" type="submit">Reservar por WhatsApp <span>↗</span></button>
+        <small>La reserva se confirma después de comprobar disponibilidad.</small>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>Expresión Estelar</strong><span>Un espacio para reconocer tu luz.</span></div>
+    <a id="whatsapp-link" href="#" target="_blank" rel="noopener">WhatsApp ↗</a>
+    <span>© <span id="year"></span> Expresión Estelar</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+let original,data;const $=s=>document.querySelector(s);const form=$('#editor');
+fetch('site-data.json').then(r=>r.json()).then(d=>{original=structuredClone(d);data=JSON.parse(localStorage.getItem('expresion-estelar-draft'))||d;build();fill()});
+function build(){$('#services').innerHTML=data.services.map((s,i)=>`<div class="service-editor"><h3>${i+1}. ${s.title}</h3><div class="grid"><label>Título<input name="services.${i}.title"></label><label>Frase destacada<input name="services.${i}.lead"></label><label class="wide">Descripción<textarea name="services.${i}.description" rows="5"></textarea></label><label>Modalidad<input name="services.${i}.format"></label><label>Precios (uno por línea)<textarea name="services.${i}.prices" rows="4"></textarea></label></div></div>`).join('')}
+function pathGet(obj,path){return path.split('.').reduce((v,k)=>v[k],obj)}
+function pathSet(obj,path,val){const keys=path.split('.');const last=keys.pop();const target=keys.reduce((v,k)=>v[k],obj);target[last]=val}
+function fill(){[...form.elements].filter(x=>x.name).forEach(el=>{let v=pathGet(data,el.name);el.value=el.name==='schedule.times'?v.join(', '):Array.isArray(v)?v.join('\n'):v})}
+function collect(){const out=structuredClone(data);[...form.elements].filter(x=>x.name).forEach(el=>{let val=el.value.trim();if(el.name==='about'||el.name==='person.bio'||el.name.endsWith('.prices'))val=val.split('\n').map(x=>x.trim()).filter(Boolean);if(el.name==='schedule.times')val=val.split(',').map(x=>x.trim()).filter(Boolean);pathSet(out,el.name,val)});return out}
+form.onsubmit=e=>{e.preventDefault();const out=collect();const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='site-data.json';a.click();URL.revokeObjectURL(a.href)};
+$('#save-local').onclick=()=>{localStorage.setItem('expresion-estelar-draft',JSON.stringify(collect()));alert('Borrador guardado en este navegador.')};
+$('#reset').onclick=()=>{if(confirm('¿Restaurar el contenido publicado?')){localStorage.removeItem('expresion-estelar-draft');data=structuredClone(original);build();fill()}};
+$('#upload-link').href='https://github.com/ramsja/expresion-estelar/upload/main';

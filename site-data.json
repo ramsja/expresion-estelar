@@ -1,0 +1,72 @@
+{
+  "brand": "Expresión Estelar",
+  "tagline": "Un espacio para reconocer tu luz.",
+  "heroQuote": "Porque dentro de ti ya existen la luz, el amor y la claridad que buscas. Este es un espacio para reconectar con tu esencia y expresarla plenamente.",
+  "aboutTitle": "¿Qué es Expresión Estelar?",
+  "about": [
+    "Expresión Estelar nace como un espacio dedicado al autoconocimiento, la conexión interior y el reconocimiento de la esencia única de cada persona.",
+    "Creemos que cada ser humano posee una luz propia. Sin embargo, las experiencias de vida, las heridas, los miedos y las dudas pueden hacer que perdamos conexión con ella. Este espacio fue creado para acompañarte en el proceso de recordar quién eres, reconocer tu valor y expresar tu esencia de manera auténtica.",
+    "A través de diferentes herramientas de autoconocimiento y acompañamiento espiritual, te invitamos a descubrir una mayor claridad, comprensión y conexión contigo misma."
+  ],
+  "person": {
+    "name": "Rebeca Presidente",
+    "shortBio": "Acompaño procesos de autoconocimiento a través de lecturas energéticas.",
+    "bio": [
+      "Soy médium y sanadora. Desde muy temprana edad he tenido una conexión natural con el mundo espiritual y experiencias relacionadas con el plano astral.",
+      "Mi camino ha estado marcado por profundos procesos de aprendizaje y transformación. A lo largo de los años atravesé experiencias que me permitieron comprender diferentes dimensiones de la realidad espiritual, hasta encontrar caminos de mayor luz, claridad y crecimiento interior.",
+      "He realizado formaciones en Reiki, Mediumnidad y Registros Akáshicos, complementando así mi experiencia y desarrollo espiritual.",
+      "Desde 2021 realizo lecturas energéticas como una herramienta de orientación, autoconocimiento y acompañamiento para quienes buscan mayor claridad y comprensión en sus procesos de vida.",
+      "Me apasiona compartir mis conocimientos y acompañar a las personas en su camino personal y espiritual, brindando mensajes, perspectivas y herramientas que les aporten claridad, comprensión y bienestar. Creo que cada persona posee una luz única, y me gusta acompañarla para que pueda reconocerla, confiar en ella y expresarla plenamente."
+    ]
+  },
+  "services": [
+    {
+      "icon": "✦",
+      "title": "Lecturas energéticas con tarot",
+      "lead": "El tarot es una herramienta para hacer consciente lo que ya vive en ti.",
+      "description": "Con el tarot te acompaño en tu proceso de autoconocimiento y a encontrar claridad en relaciones, familia, trabajo, dinero y decisiones personales, siempre desde un enfoque de crecimiento, conciencia y evolución personal. El tarot no decide por ti, te guía.",
+      "format": "Sesiones personalizadas por videollamada",
+      "prices": ["Sesión completa · 60 min · $55", "Sesión profunda · 30 min · $30", "Mini sesión · 15 min · $15"]
+    },
+    {
+      "icon": "☼",
+      "title": "Método ESTELAR con Reiki",
+      "lead": "Porque nadie te sana: tu cuerpo recuerda cómo hacerlo.",
+      "description": "El Reiki es una técnica de armonización energética que favorece el equilibrio físico, emocional, mental y espiritual. A través de técnicas energéticas, relajación y escucha profunda, la sesión te acompaña a comprender los mensajes de tu cuerpo, liberar bloqueos y reconectar con tu equilibrio interior. No reemplaza la atención médica, pero puede ser un valioso complemento para tu bienestar integral.",
+      "format": "Experiencia personalizada por videollamada",
+      "prices": ["Experiencia Estelar · 35 min · $55"]
+    },
+    {
+      "icon": "☾",
+      "title": "Registros Akáshicos",
+      "lead": "Una comprensión más profunda de tu ser.",
+      "description": "Los Registros Akáshicos son un espacio de conexión espiritual que permite acceder a información relacionada con tu proceso de vida desde una perspectiva más amplia. Explora preguntas, situaciones o aprendizajes presentes en tu camino y recibe mensajes orientados a la comprensión, la claridad y el crecimiento personal.",
+      "format": "Lecturas personalizadas por videollamada",
+      "prices": ["Lectura Akáshica · 60 min · $65", "Exploración Akáshica · 30 min · $35"]
+    },
+    {
+      "icon": "✧",
+      "title": "Mediumnidad",
+      "lead": "Un espacio de conexión, comprensión y tranquilidad.",
+      "description": "La mediumnidad es la capacidad de percibir y transmitir información proveniente de personas fallecidas. Durante la sesión actúo como canal para recibir mensajes que puedan aportar comprensión, guía, paz o claridad. Cada experiencia es única y se desarrolla desde el respeto y la sensibilidad.",
+      "format": "Mensajes personalizados por videollamada",
+      "prices": ["Sesión de mediumnidad · 55 min · $75"]
+    },
+    {
+      "icon": "𓂀",
+      "title": "Quiromancia",
+      "lead": "Tus manos son un espejo de tu mundo interior.",
+      "description": "Tus manos reflejan tu universo psíquico, consciente, inconsciente y supraconsciente. En ellas pueden revelarse patrones emocionales, fortalezas, formas de amar, intuición, propósito y procesos de crecimiento. Las líneas no son fijas: cambian, como tú cambias cuando tomas conciencia, sanas y eliges diferente.",
+      "format": "Lecturas personalizadas",
+      "prices": ["Lectura completa · €75 · Informe, videollamada y carta consejo", "Mini lectura · €35 · Mensaje principal, bloqueo y orientación"]
+    }
+  ],
+  "schedule": {
+    "days": "Lunes a viernes",
+    "times": ["08:00", "09:00", "10:00"]
+  },
+  "contact": {
+    "whatsapp": "34641679658",
+    "defaultMessage": "Hola Rebeca, quisiera más información acerca de tus servicios."
+  }
+}
