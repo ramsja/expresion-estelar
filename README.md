@@ -7,6 +7,6 @@ Sitio web estático con reserva y recepción de testimonios por WhatsApp.
 1. Abrir `admin.html` desde el sitio publicado.
 2. Cambiar textos, precios, horarios o WhatsApp.
 3. Pulsar **Descargar cambios**.
-4. Pulsar **Subir a GitHub** y reemplazar `site-data.json`.
+4. Entregar `site-data.json` a la persona encargada de publicar la web.
 
-GitHub Pages publicará el cambio automáticamente.
+La web y su editor quedan identificados únicamente como **Expresión Estelar · Rebeca Presidente**.

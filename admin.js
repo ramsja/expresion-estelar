@@ -8,4 +8,3 @@ function collect(){const out=structuredClone(data);[...form.elements].filter(x=>
 form.onsubmit=e=>{e.preventDefault();const out=collect();const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='site-data.json';a.click();URL.revokeObjectURL(a.href)};
 $('#save-local').onclick=()=>{localStorage.setItem('expresion-estelar-draft',JSON.stringify(collect()));alert('Borrador guardado en este navegador.')};
 $('#reset').onclick=()=>{if(confirm('¿Restaurar el contenido publicado?')){localStorage.removeItem('expresion-estelar-draft');data=structuredClone(original);build();fill()}};
-$('#upload-link').href='https://github.com/ramsja/expresion-estelar/upload/main';
