@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: es
+publish_mode: simple
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "sitio"
+    label: "Expresión Estelar"
+    files:
+      - name: "contenido"
+        label: "Contenido, servicios y agenda"
+        file: "site-data.json"
+        format: "json"
+        fields:
+          - { label: "Nombre de la marca", name: "brand", widget: "string" }
+          - { label: "Lema", name: "tagline", widget: "string" }
+          - { label: "Frase de portada", name: "heroQuote", widget: "text" }
+          - { label: "Título de presentación", name: "aboutTitle", widget: "string" }
+          - label: "Presentación"
+            name: "about"
+            widget: "list"
+            field: { label: "Párrafo", name: "paragraph", widget: "text" }
+          - label: "Sobre Rebeca"
+            name: "person"
+            widget: "object"
+            fields:
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Presentación corta", name: "shortBio", widget: "text" }
+              - label: "Biografía"
+                name: "bio"
+                widget: "list"
+                field: { label: "Párrafo", name: "paragraph", widget: "text" }
+          - label: "Servicios"
+            name: "services"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Símbolo", name: "icon", widget: "string" }
+              - { label: "Nombre del servicio", name: "title", widget: "string" }
+              - { label: "Frase destacada", name: "lead", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+              - { label: "Modalidad", name: "format", widget: "string" }
+              - label: "Precios"
+                name: "prices"
+                widget: "list"
+                field: { label: "Opción", name: "price", widget: "string" }
+          - label: "Agenda"
+            name: "schedule"
+            widget: "object"
+            fields:
+              - { label: "Días disponibles", name: "days", widget: "string" }
+              - label: "Horas disponibles"
+                name: "times"
+                widget: "list"
+                field: { label: "Hora", name: "time", widget: "string" }
+          - label: "Contacto"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "WhatsApp, con código de país", name: "whatsapp", widget: "string" }
+              - { label: "Mensaje inicial", name: "defaultMessage", widget: "text" }

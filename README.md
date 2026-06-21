@@ -4,9 +4,9 @@ Sitio web estático con reserva y recepción de testimonios por WhatsApp.
 
 ## Edición sin código
 
-1. Abrir `admin.html` desde el sitio publicado.
-2. Cambiar textos, precios, horarios o WhatsApp.
-3. Pulsar **Descargar cambios**.
-4. Entregar `site-data.json` a la persona encargada de publicar la web.
+1. Abrir `/admin/` desde el sitio publicado.
+2. Iniciar sesión con la invitación de Netlify Identity.
+3. Cambiar textos, precios, horarios o WhatsApp.
+4. Pulsar **Publicar**; Netlify actualizará la web automáticamente.
 
 La web y su editor quedan identificados únicamente como **Expresión Estelar · Rebeca Presidente**.

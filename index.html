@@ -100,5 +100,15 @@
     <span>© <span id="year"></span> Expresión Estelar</span>
   </footer>
   <script src="app.js"></script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', user => {
+        if (!user && /#(invite_token|recovery_token|confirmation_token)=/.test(location.hash)) {
+          window.netlifyIdentity.open();
+        }
+      });
+    }
+  </script>
 </body>
 </html>
