@@ -23,3 +23,11 @@ create policy "Lectura pública para testimonios"
 create policy "Cualquiera puede insertar testimonios"
   on testimonials for insert
   with check (true);
+
+-- 5) Permitir BORRAR SOLO a administradores con sesión iniciada (Supabase Auth).
+--    El público (clave anon sin login) NO puede borrar. Esto habilita el botón
+--    de borrar de la página privada moderar.html.
+create policy "Solo administradores autenticados pueden borrar"
+  on testimonials for delete
+  to authenticated
+  using (true);
