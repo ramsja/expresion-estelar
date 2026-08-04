@@ -1,7 +1,7 @@
 // CONFIGURACIÓN DE SUPABASE
 // Reemplaza estas credenciales con las de tu proyecto de Supabase
-const SUPABASE_URL = 'https://your-project-id.supabase.co';
-const SUPABASE_ANON_KEY = 'your-anon-key';
+const SUPABASE_URL = 'https://dxjzcgqkehdhasofbmgy.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4anpjZ3FrZWhkaGFzb2ZibWd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU4NTU2NzUsImV4cCI6MjEwMTQzMTY3NX0.12R9TNy04U5ihFZp5B5cYVrPKIfqt3duCvjwfzJrE44';
 
 let supabaseClient = null;
 if (typeof supabase !== 'undefined' && SUPABASE_URL !== 'https://your-project-id.supabase.co') {
