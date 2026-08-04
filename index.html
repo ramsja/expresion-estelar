@@ -66,13 +66,20 @@
       <span class="quote-mark">“</span>
       <h2>Cada experiencia es única.</h2>
       <p>Gracias por compartir cómo este espacio ha contribuido en tu camino.</p>
+
+      <div id="testimonials-grid" class="testimonials-grid"></div>
+      <div id="testimonials-status" class="testimonials-status">Cargando testimonios...</div>
+
       <button class="text-button light" id="testimonial-toggle">Compartir mi experiencia <span>＋</span></button>
+      
+      <div id="testimonial-success" class="testimonial-success-message" style="display: none;"></div>
+
       <form id="testimonial-form" class="testimonial-form" hidden>
         <label>Nombre<input name="name" required></label>
         <label>País<input name="country"></label>
         <label class="wide">Tu experiencia<textarea name="message" rows="4" required></textarea></label>
-        <label>Calificación<select name="rating"><option>★★★★★</option><option>★★★★</option><option>★★★</option><option>★★</option><option>★</option></select></label>
-        <button class="button" type="submit">Enviar por WhatsApp</button>
+        <label>Calificación<select name="rating"><option value="5">★★★★★</option><option value="4">★★★★</option><option value="3">★★★</option><option value="2">★★</option><option value="1">★</option></select></label>
+        <button class="button" type="submit">Publicar testimonio</button>
       </form>
     </section>
 
@@ -99,6 +106,7 @@
     <a id="whatsapp-link" href="#" target="_blank" rel="noopener">WhatsApp ↗</a>
     <span>© <span id="year"></span> Expresión Estelar</span>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="app.js"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
