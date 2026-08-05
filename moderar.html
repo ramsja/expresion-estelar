@@ -158,11 +158,27 @@
       if (!confirm('¿Borrar este testimonio? Esta acción no se puede deshacer.')) return;
       btn.disabled = true;
       btn.textContent = 'Borrando…';
-      const { error } = await client.from('testimonials').delete().eq('id', id);
+      // Supabase puede responder sin error aunque RLS haya impedido borrar
+      // cualquier fila. Pedimos el id eliminado para confirmar el resultado.
+      const { data: deletedRows, error } = await client
+        .from('testimonials')
+        .delete()
+        .eq('id', id)
+        .select('id');
       if (error) {
         btn.disabled = false;
         btn.textContent = '🗑️ Borrar';
         showMsg($('list-msg'), 'No se pudo borrar: ' + error.message, 'error');
+        return;
+      }
+      if (!deletedRows || deletedRows.length === 0) {
+        btn.disabled = false;
+        btn.textContent = '🗑️ Borrar';
+        showMsg(
+          $('list-msg'),
+          'Supabase no autorizó el borrado. Aplica la política de eliminación para usuarios autenticados.',
+          'error'
+        );
         return;
       }
       showMsg($('list-msg'), 'Testimonio borrado.', 'ok');
