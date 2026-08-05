@@ -7,6 +7,11 @@ footer{grid-template-columns:2fr 1fr 1fr}
 @media(max-width:600px){footer{grid-template-columns:1fr}}
 
 /* Testimonials Styles */
+.logo {
+  mix-blend-mode: normal;
+  filter: none;
+}
+
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
