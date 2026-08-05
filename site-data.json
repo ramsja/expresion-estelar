@@ -27,8 +27,7 @@
     "days": "Lunes a viernes",
     "times": [
       "10:00",
-      "13:00",
-      "22:00"
+      "13:00"
     ]
   },
   "services": [
