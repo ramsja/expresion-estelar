@@ -27,7 +27,8 @@
     "days": "Lunes a viernes",
     "times": [
       "10:00",
-      "13:00"
+      "13:00",
+      "22:00"
     ]
   },
   "services": [
@@ -38,9 +39,9 @@
       "description": "Con el tarot te acompaño en tu proceso de autoconocimiento y a encontrar claridad en relaciones, familia, trabajo, dinero y decisiones personales, siempre desde un enfoque de crecimiento, conciencia y evolución personal. El tarot no decide por ti, te guía.",
       "format": "Sesiones personalizadas por videollamada",
       "prices": [
-        "Sesión completa · 60 min · $55",
-        "Sesión profunda · 30 min · $30",
-        "Mini sesión · 15 min · $15"
+        "Sesión completa · 60 min · €55",
+        "Sesión profunda · 30 min · €30",
+        "Mini sesión · 15 min · €15"
       ]
     },
     {
@@ -50,8 +51,8 @@
       "description": "El Reiki es una técnica de armonización energética que favorece el equilibrio físico, emocional, mental y espiritual. A través de técnicas energéticas, relajación y escucha profunda, la sesión te acompaña a comprender los mensajes de tu cuerpo, liberar bloqueos y reconectar con tu equilibrio interior. No reemplaza la atención médica, pero puede ser un valioso complemento para tu bienestar integral.",
       "format": "Experiencia personalizada por videollamada",
       "prices": [
-        "Experiencia Estelar · 35 min · $55",
-        "Experiencia Estelar · 65 min · $90"
+        "Experiencia Estelar · 35 min · €55",
+        "Experiencia Estelar · 65 min · €90"
       ]
     },
     {
@@ -61,8 +62,8 @@
       "description": "Los Registros Akáshicos son un espacio de conexión espiritual que permite acceder a información relacionada con tu proceso de vida desde una perspectiva más amplia. Explora preguntas, situaciones o aprendizajes presentes en tu camino y recibe mensajes orientados a la comprensión, la claridad y el crecimiento personal.",
       "format": "Lecturas personalizadas por videollamada",
       "prices": [
-        "Lectura Akáshica · 60 min · $65",
-        "Exploración Akáshica · 30 min · $35"
+        "Lectura Akáshica · 60 min · €65",
+        "Exploración Akáshica · 30 min · €35"
       ]
     },
     {
@@ -72,7 +73,7 @@
       "description": "La mediumnidad es la capacidad de percibir y transmitir información proveniente de personas fallecidas. Durante la sesión actúo como canal para recibir mensajes que puedan aportar comprensión, guía, paz o claridad. Cada experiencia es única y se desarrolla desde el respeto y la sensibilidad.",
       "format": "Mensajes personalizados por videollamada",
       "prices": [
-        "Sesión de mediumnidad · 55 min · $75"
+        "Sesión de mediumnidad · 55 min · €75"
       ]
     },
     {
@@ -82,8 +83,8 @@
       "description": "Tus manos reflejan tu universo psíquico, consciente, inconsciente y supraconsciente. En ellas pueden revelarse patrones emocionales, fortalezas, formas de amar, intuición, propósito y procesos de crecimiento. Las líneas no son fijas: cambian, como tú cambias cuando tomas conciencia, sanas y eliges diferente.",
       "format": "Lecturas personalizadas",
       "prices": [
-        "Lectura completa · $75 · Informe, videollamada y carta consejo",
-        "Mini lectura · $35 · Mensaje principal, bloqueo y orientación"
+        "Lectura completa · €75 · Informe, videollamada y carta consejo",
+        "Mini lectura · €35 · Mensaje principal, bloqueo y orientación"
       ]
     }
   ]
