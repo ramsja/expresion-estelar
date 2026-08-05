@@ -26,9 +26,8 @@
   "schedule": {
     "days": "Lunes a viernes",
     "times": [
-      "13:00",
-      "15:00",
-      "17:00"
+      "10:00",
+      "13:00"
     ]
   },
   "services": [
@@ -83,8 +82,8 @@
       "description": "Tus manos reflejan tu universo psíquico, consciente, inconsciente y supraconsciente. En ellas pueden revelarse patrones emocionales, fortalezas, formas de amar, intuición, propósito y procesos de crecimiento. Las líneas no son fijas: cambian, como tú cambias cuando tomas conciencia, sanas y eliges diferente.",
       "format": "Lecturas personalizadas",
       "prices": [
-        "Lectura completa · €75 · Informe, videollamada y carta consejo",
-        "Mini lectura · €35 · Mensaje principal, bloqueo y orientación"
+        "Lectura completa · $75 · Informe, videollamada y carta consejo",
+        "Mini lectura · $35 · Mensaje principal, bloqueo y orientación"
       ]
     }
   ]
