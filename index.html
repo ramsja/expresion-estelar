@@ -66,6 +66,7 @@
       <span class="quote-mark">“</span>
       <h2>Cada experiencia es única.</h2>
       <p>Gracias por compartir cómo este espacio ha contribuido en tu camino.</p>
+      <button class="text-button light admin-access" id="admin-access" type="button">Acceso admin</button>
 
       <div id="testimonials-grid" class="testimonials-grid"></div>
       <div id="testimonials-status" class="testimonials-status">Cargando testimonios...</div>
@@ -107,8 +108,8 @@
     <span>© <span id="year"></span> Expresión Estelar</span>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="app.js"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script src="app.js"></script>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on('init', user => {
