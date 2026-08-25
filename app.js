@@ -23,9 +23,30 @@ const saveLocalTestimonial = (item) => {
   localStorage.setItem('expresion_estelar_testimonials', JSON.stringify(list));
 };
 
+const removeLocalTestimonial = (id) => {
+  const list = getLocalTestimonials().filter(t => t.id !== id);
+  localStorage.setItem('expresion_estelar_testimonials', JSON.stringify(list));
+};
+
 let siteData;
 const $=(s,p=document)=>p.querySelector(s);const $$=(s,p=document)=>[...p.querySelectorAll(s)];
 const paragraphs=(items)=>items.map(x=>`<p>${x}</p>`).join('');
+
+let isAdmin = false;
+function updateAdminUI(){
+  const btn = $('#admin-access');
+  if (btn) btn.textContent = isAdmin ? 'Cerrar sesión admin' : 'Acceso admin';
+  document.body.classList.toggle('is-admin', isAdmin);
+}
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on('init', user => { isAdmin = !!user; updateAdminUI(); });
+  window.netlifyIdentity.on('login', () => { isAdmin = true; updateAdminUI(); window.netlifyIdentity.close(); });
+  window.netlifyIdentity.on('logout', () => { isAdmin = false; updateAdminUI(); });
+  $('#admin-access').onclick = () => {
+    const user = window.netlifyIdentity.currentUser();
+    if (user) window.netlifyIdentity.logout(); else window.netlifyIdentity.open('login');
+  };
+}
 
 fetch('site-data.json').then(r=>r.json()).then(data=>{siteData=data;render(data)}).catch(()=>alert('No se pudo cargar el contenido del sitio.'));
 
@@ -63,16 +84,16 @@ $('#testimonial-form').onsubmit = async (e) => {
     rating: ratingValue,
     created_at: new Date().toISOString()
   };
-  
+
   try {
     if (supabaseClient) {
       const { error } = await supabaseClient
         .from('testimonials')
         .insert([testimonial]);
-      
+
       if (error) throw error;
     } else {
-      saveLocalTestimonial(testimonial);
+      saveLocalTestimonial({ ...testimonial, id: `local-${Date.now()}-${Math.random().toString(36).slice(2)}` });
     }
     
     form.reset();
@@ -140,7 +161,8 @@ function renderTestimonials(list) {
       year: 'numeric'
     }) : 'Reciente';
     return `
-      <div class="testimonial-card">
+      <div class="testimonial-card" data-id="${escapeHtml(String(item.id))}">
+        <button class="testimonial-delete" type="button" aria-label="Borrar testimonio" title="Borrar testimonio">×</button>
         <div>
           <div class="testimonial-rating">${stars}</div>
           <p class="testimonial-text">"${escapeHtml(item.message)}"</p>
@@ -156,6 +178,38 @@ function renderTestimonials(list) {
     `;
   }).join('');
 }
+
+$('#testimonials-grid').addEventListener('click', async (e) => {
+  const btn = e.target.closest('.testimonial-delete');
+  if (!btn) return;
+  const card = btn.closest('.testimonial-card');
+  const id = card.dataset.id;
+  if (!confirm('¿Borrar este testimonio? Esta acción no se puede deshacer.')) return;
+  btn.disabled = true;
+  try {
+    if (supabaseClient) {
+      const user = window.netlifyIdentity && window.netlifyIdentity.currentUser();
+      if (!user) { alert('Inicia sesión con "Acceso admin" para borrar testimonios.'); return; }
+      const res = await fetch('/.netlify/functions/delete-testimonial', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${user.token.access_token}`
+        },
+        body: JSON.stringify({ id: isNaN(Number(id)) ? id : Number(id) })
+      });
+      const result = await res.json();
+      if (!res.ok) throw new Error(result.error || 'No se pudo borrar el testimonio.');
+    } else {
+      removeLocalTestimonial(id);
+    }
+    fetchTestimonials();
+  } catch (err) {
+    console.error('Error al borrar el testimonio:', err);
+    alert(err.message || 'Hubo un error al borrar el testimonio.');
+    btn.disabled = false;
+  }
+});
 
 function escapeHtml(unsafe) {
   return unsafe

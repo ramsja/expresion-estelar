@@ -26,6 +26,7 @@ footer{grid-template-columns:2fr 1fr 1fr}
   text-align: left;
 }
 .testimonial-card {
+  position: relative;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
@@ -37,6 +38,34 @@ footer{grid-template-columns:2fr 1fr 1fr}
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.admin-access {
+  color: #e3d9e9;
+  opacity: 0.55;
+  font-size: 10px;
+  margin-top: 18px;
+}
+.testimonial-delete {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+.testimonial-delete:hover {
+  background: rgba(200, 60, 60, 0.55);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+body.is-admin .testimonial-delete {
+  display: block;
 }
 .testimonial-card:hover {
   transform: translateY(-4px);
