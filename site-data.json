@@ -27,8 +27,7 @@
     "days": "Lunes a viernes",
     "times": [
       "10:00",
-      "13:00",
-      "19:00"
+      "13:00"
     ]
   },
   "services": [
@@ -60,6 +59,7 @@
       "description": "Los Registros Akáshicos son un espacio de conexión espiritual que permite acceder a información relacionada con tu proceso de vida desde una perspectiva más amplia. Explora preguntas, situaciones o aprendizajes presentes en tu camino y recibe mensajes orientados a la comprensión, la claridad y el crecimiento personal.",
       "format": "Lecturas personalizadas por videollamada",
       "prices": [
+        "Informe Estelar · €75",
         "Lectura Akáshica · 60 min · €55"
       ]
     },
@@ -79,7 +79,7 @@
       "lead": "Desarrolla tu propia voz frente a las cartas. ",
       "format": "Formación personalizada por videollamada",
       "prices": [
-        "Formación completa · 13 clases ·  €260 Todo el recorrido de la formación.",
+        "Formación completa · 15 clases ·  €300 Todo el recorrido de la formación.",
         "Clase individual · €20 Elige una clase del temario o avanza clase por clase, a tu propio ritmo."
       ],
       "description": "\nUna formación para aprender a interpretar el Tarot de manera profunda, consciente y personal, desarrollando una relación propia con las cartas.\n\nAprenderás a comprender su lenguaje escuchando las cartas y así podrás realizar lecturas para ti y otras personas con mayor profundidad, criterio y confianza.\n\nPorque aprender Tarot no se trata solamente de memorizar significados, sino de desarrollar criterio, intuición y una manera propia de leer."
